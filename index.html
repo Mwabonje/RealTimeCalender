@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calender</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero">
+        <h3 class="hero-title" >Real-Time Mini Calendar with Date, Day, Month and Year Display.</h3>
+      <div class="calender">
+        <div class="left">
+            <p id="day">09</p>
+            <p id="weekday">Sunday</p>
+            
+        </div>
+        <div class="right">
+            <p id="month">March</p>
+            <p id="year">2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- javascript -->
+   <script>
+  // Get references to the elements
+  const dayElement = document.getElementById("day");
+  const weekdayElement = document.getElementById("weekday");
+  const monthElement = document.getElementById("month");
+  const yearElement = document.getElementById("year");
+
+  // Function to update the date and time
+  function updateDateTime() {
+    const now = new Date();
+
+    // Update day
+    dayElement.textContent = now.toLocaleDateString("en-US", { day: "numeric" });
+
+    // Update weekday
+    weekdayElement.textContent = now.toLocaleDateString("en-US", { weekday: "long" });
+
+    // Update month and year
+    monthElement.textContent = now.toLocaleDateString("en-US", { month: "long" });
+    yearElement.textContent = now.getFullYear();
+  }
+
+  // Call the function initially
+  updateDateTime();
+
+  // Update every second
+  setInterval(updateDateTime, 1000);
+</script>
+
+  </body>
+</html>
