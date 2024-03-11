@@ -88,4 +88,6 @@
 .left {
   width: 58%;
 }
-
+#day {
+  font-size: 5rem;
+}
