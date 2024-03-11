@@ -91,3 +91,20 @@
 #day {
   font-size: 5rem;
 }
+/* Add this CSS to your existing style.css file */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#day,
+#weekday,
+#greeting {
+  animation: fadeIn 1s ease-in-out forwards;
+}
