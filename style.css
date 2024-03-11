@@ -57,7 +57,10 @@
     font-size: 14px;
   }
 }
-
+#greeting {
+  font-size: 16px;
+  
+}
 .calender {
   width: 300px;
   height: 250px;
