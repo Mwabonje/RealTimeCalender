@@ -108,3 +108,27 @@
 #greeting {
   animation: fadeIn 1s ease-in-out forwards;
 }
+.right {
+  width: 42%;
+  background: #FF7D00;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+/* Add this CSS to your existing style.css file */
+.right p {
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
